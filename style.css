@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body
+{
+    height:100%;
+    width:100%;
+}
+#main
+{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+#page
+{
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+#page1
+{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(116, 129, 166);
+    position: relative;
+}
+#page2
+{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(197, 11, 113);
+    position: relative;
+}
+#page3
+{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(63, 201, 70);
+    position: relative;
+}
+
+#hero-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  display: block;
+}
+.text-layer
+{
+    position: absolute;
+    color: #f7f0f0;
+    z-index: 10;
+    text-align: center;
+    padding: 40px;
+    pointer-events: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+#page .text-layer {
+    right: 0%;
+    width: 50vw;
+    color: #f8f7f7f7;
+  text-size-adjust:50px;
+}
+
+
+#page1 .text-layer {
+    right: 5%;
+    width: 40vw;
+}
+
+#page2 .text-layer {
+    left: 0%;
+    width: 40vw;
+}
+
+
+#page3 .text-layer {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+}
+
+.text-layer h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.text-layer p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
