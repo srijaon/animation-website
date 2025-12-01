@@ -123,19 +123,30 @@ html,body
     background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
 
-.music-player {
+.music-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
 
-.music-player audio {
-    width: 200px;
-    height: 30px;
-    outline: none;
+.music-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
 }
