@@ -22,6 +22,18 @@ html,body
     width: 100%;
     background-color: black;
     position: relative;
+    overflow: hidden;
+}
+
+.page-bg-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.6;
 }
 #page1
 {
@@ -123,30 +135,79 @@ html,body
     background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
 
-.music-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    padding: 15px 20px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #hero-canvas {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .text-layer {
+        width: 100% !important;
+        padding: 30px 20px !important;
+        top: 60% !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    #page .text-layer {
+        width: 100%;
+        right: auto;
+    }
+
+    #page1 .text-layer {
+        width: 100%;
+        right: auto;
+    }
+
+    #page2 .text-layer {
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #page3 .text-layer {
+        width: 100%;
+    }
+
+    .text-layer h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .text-layer p {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
+    .action-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
 }
 
-.music-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+@media (max-width: 480px) {
+    .text-layer {
+        padding: 20px 15px !important;
+        top: 55% !important;
+    }
+
+    .text-layer h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .text-layer p {
+        font-size: 0.9em;
+        line-height: 1.3;
+    }
+
+    .action-btn {
+        margin-top: 15px;
+        padding: 8px 15px;
+        font-size: 0.8em;
+    }
 }
+
